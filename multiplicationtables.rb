@@ -14,9 +14,8 @@
 # 11  22  33  44  55  66  77  88  99 110 121 132
 # 12  24  36  48  60  72  84  96 108 120 132 144
 
-matrix = {}
 
-# function to generate each line of the table
+# method to generate each line of the table
 # takes coeff and multiplies it by 1..12 and returns an array
 def generate_line(coeff)
   result = []
@@ -26,7 +25,7 @@ def generate_line(coeff)
   result
 end
 
-# function to calculate how much padding is required before values
+# method to calculate how much padding is required before values
 # to keep numbers right aligned
 def add_padding(values)
   values.each_with_index do |value, index|

@@ -1,5 +1,5 @@
 
-def fizz_buzz_count(file)
+def fizz_buzz_count(ARGV[0])
   File.open(file).each_line do |line|
     args = line.split
     fizz = args[0].to_i
