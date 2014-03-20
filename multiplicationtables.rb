@@ -36,6 +36,8 @@ def add_padding(values)
   end
 end
 
+matrix = {}
+
 # generates 1..12 lines for the table, filling the rest of the line with 
 # coeff * line_value
 for i in 1..12 do
