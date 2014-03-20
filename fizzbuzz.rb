@@ -1,13 +1,19 @@
 
-def fizz_buzz_count(fizz, buzz, limit)
-  result = []
-  (1..limit).each do |n|
-    result << "FB" if n % (fizz * buzz) == 0
-    result << "F" if n % fizz == 0
-    result << "B" if n % buzz == 0
-    result << n if result[n - 1].nil?
+def fizz_buzz_count(file)
+  File.open(file).each_line do |line|
+    args = line.split
+    fizz = args[0].to_i
+    buzz = args[1].to_i
+    limit = args[2].to_i
+
+    (1..limit).each do |n|
+      print "F" if n % fizz == 0
+      print "B" if n % buzz == 0
+      print n if n % fizz != 0 && n % buzz != 0
+      print " "
+    end
+    puts
   end
-  result.join(" ")
 end
 
-puts fizz_buzz_count(3, 5, 25)
+puts fizz_buzz_count('fizzbuzz.data')
